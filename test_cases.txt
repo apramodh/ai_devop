@@ -1,0 +1,69 @@
+    Functional Test Cases:
+
+    Test Case ID: TC-001
+    Description: Test user registration functionality
+    Steps:
+    1. Open the registration page.
+    2. Enter valid details (name, email, password, etc.)
+    3. Submit the form.
+    Expected Result: User is registered successfully and an email is sent to the provided email address for verification.
+
+    Test Case ID: TC-002
+    Description: Test email verification functionality
+    Steps:
+    1. Open the email received after registration.
+    2. Click on the verification link.
+    Expected Result: Email is verified successfully and user can now log in.
+
+    Test Case ID: TC-003
+    Description: Test login functionality
+    Steps:
+    1. Open the login page.
+    2. Enter registered and verified email and password.
+    3. Click on the login button.
+    Expected Result: User is logged in successfully and redirected to the dashboard.
+
+    Edge Test Cases:
+
+    Test Case ID: TC-004
+    Description: Test password reset functionality when user forgets password
+    Steps:
+    1. Click on forgot password link on login page.
+    2. Enter registered email address.
+    3. Click on submit.
+    Expected Result: An email with password reset link is sent to the registered email address.
+
+    Test Case ID: TC-005
+    Description: Test multi-factor authentication during login
+    Steps:
+    1. Enter registered and verified email and password.
+    2. A prompt for second factor authentication comes up.
+    3. Complete the second factor authentication.
+    Expected Result: Second factor authentication is successful, user is logged in and redirected to the dashboard.
+
+    Negative Test Cases:
+
+    Test Case ID: TC-006
+    Description: Test login with unverified email
+    Steps:
+    1. Open the login page.
+    2. Enter unverified email and password.
+    3. Click on login button.
+    Expected Result: Error is shown that the email address is not verified.
+
+    Test Case ID: TC-007
+    Description: Test login with incorrect password
+    Steps:
+    1. Open the login page.
+    2. Enter registered email and incorrect password.
+    3. Click on login button.
+    Expected Result: Error is shown that the password is incorrect. 
+
+    Test Case ID: TC-008
+    Description: Test registration with already registered email
+    Steps:
+    1. Open registration page.
+    2. Enter an email that has been previously registered.
+    3. Enter other valid details.
+    4. Submit the form.
+    Expected Result: Error is shown that the email address is already registered.
