@@ -73,7 +73,7 @@ def calculate_jd_match(job_description: str, resume: str) -> float:
     _ = jd_vectorizer.fit_transform([job_description])
     jd_skills = set(jd_vectorizer.get_feature_names_out())
  
-    resume_skills = extract_skills(resume)     en 
+    resume_skills = extract_skills(resume) 
     match_percentage = (len(jd_skills.intersection(resume_skills)) / len(jd_skills) * 100) if jd_skills else 0
     return round(match_percentage, 2)
  
